@@ -2,110 +2,110 @@
 
 /* Estilo general de la tarjeta de noticias */
 .custom-news-card-image-style {
-  max-width: 500px; /* Establece un ancho máximo para la tarjeta como en la imagen */
-  border: none;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-  overflow: hidden;
-  background-color: #ffffff;
-}
-
-/* Asegura que el card-body tenga el padding adecuado */
-.custom-news-card-image-style .card-body {
-    padding: 20px;
-}
-
-/* Estilo para el título principal */
-.main-news-title {
-    color: #007bff;
-    font-size: 2em;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-/* *** Estilo para la imagen con responsive y object-fit *** */
-.news-item-image-image-style {
-  /* Bootstrap's img-fluid ya maneja max-width: 100%; y height: auto; */
-  display: block; /* Asegura que la imagen ocupe su propia línea */
-  margin-left: auto; /* Centra la imagen si su contenedor es más ancho que ella */
-  margin-right: auto; /* Centra la imagen si su contenedor es más ancho que ella */
-  border-radius: 4px; /* Bordes redondeados sutiles para la imagen */
-  /* Definimos una altura máxima para mantener consistencia visual */
-  max-height: 300px; /* Ajusta esta altura según lo necesites */
-  /* Usamos object-fit para controlar cómo la imagen llena el espacio definido por el ancho y max-height */
-  object-fit: cover; /* La imagen cubrirá el área, recortándose si es necesario para mantener su proporción */
-
-  /* mb-3 ya maneja el margen inferior */
-}
-/* ***************************************************** */
-
-
-/* Descripción de la noticia */
-.news-item-description-image-style {
-  color: #555;
-  line-height: 1.5;
-  margin-bottom: 20px;
-}
-
-/* Estilos para los botones de navegación */
-.news-nav-btn-image-style {
-  border-radius: 20px;
-  padding: 8px 20px;
-  font-size: 1em;
-  font-weight: normal;
-  transition: all 0.3s ease;
-}
-
-/* Estilo específico para el botón Siguiente (Primary) */
-.btn-primary.news-nav-btn-image-style {
-    background-color: #007bff;
-    border-color: #007bff;
-}
-
-.btn-primary.news-nav-btn-image-style:hover {
-    background-color: #0056b3;
-    border-color: #0056b3;
-}
-
-/* Estilo específico para el botón Anterior (Outline Secondary) */
-.btn-outline-secondary.news-nav-btn-image-style {
-    color: #6c757d;
-    border-color: #6c757d;
-}
-
-.btn-outline-secondary.news-nav-btn-image-style:hover {
-    color: #fff;
-    background-color: #6c757d;
-    border-color: #6c757d;
-}
-
-
-/* Media query para ajustes finos en pantallas pequeñas */
-@media (max-width: 575.98px) {
-    .custom-news-card-image-style {
-        padding: 0;
-    }
-    .custom-news-card-image-style .card-body {
-        padding: 15px;
-    }
-
-    .main-news-title {
-        font-size: 1.5em;
-        margin-bottom: 15px !important;
-    }
-
-    .news-item-title-image-style {
-        font-size: 1.3em;
-    }
-    .news-item-description-image-style {
-        font-size: 0.9em;
-    }
-    .news-nav-btn-image-style {
-        padding: 6px 15px;
-        font-size: 0.9em;
-    }
-
-    /* La imagen ya es responsive por defecto con img-fluid */
-    /* No necesitamos reglas específicas de tamaño fijo aquí */
-}
+    max-width: 500px; /* Establece un ancho máximo para la tarjeta como en la imagen */
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    background-color: #ffffff;
+  }
+  
+  /* Asegura que el card-body tenga el padding adecuado */
+  .custom-news-card-image-style .card-body {
+      padding: 20px;
+  }
+  
+  /* Estilo para el título principal */
+  .main-news-title {
+      color: #007bff;
+      font-size: 2em;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+  }
+  
+  /* *** Estilo para la imagen con responsive y object-fit *** */
+  .news-item-image-image-style {
+    /* Bootstrap's img-fluid ya maneja max-width: 100%; y height: auto; */
+    display: block; /* Asegura que la imagen ocupe su propia línea */
+    margin-left: auto; /* Centra la imagen si su contenedor es más ancho que ella */
+    margin-right: auto; /* Centra la imagen si su contenedor es más ancho que ella */
+    border-radius: 4px; /* Bordes redondeados sutiles para la imagen */
+    /* Definimos una altura máxima para mantener consistencia visual */
+    max-height: 300px; /* Ajusta esta altura según lo necesites */
+    /* Usamos object-fit para controlar cómo la imagen llena el espacio definido por el ancho y max-height */
+    object-fit: cover; /* La imagen cubrirá el área, recortándose si es necesario para mantener su proporción */
+  
+    /* mb-3 ya maneja el margen inferior */
+  }
+  /* ***************************************************** */
+  
+  
+  /* Descripción de la noticia */
+  .news-item-description-image-style {
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilos para los botones de navegación */
+  .news-nav-btn-image-style {
+    border-radius: 20px;
+    padding: 8px 20px;
+    font-size: 1em;
+    font-weight: normal;
+    transition: all 0.3s ease;
+  }
+  
+  /* Estilo específico para el botón Siguiente (Primary) */
+  .btn-primary.news-nav-btn-image-style {
+      background-color: #007bff;
+      border-color: #007bff;
+  }
+  
+  .btn-primary.news-nav-btn-image-style:hover {
+      background-color: #0056b3;
+      border-color: #0056b3;
+  }
+  
+  /* Estilo específico para el botón Anterior (Outline Secondary) */
+  .btn-outline-secondary.news-nav-btn-image-style {
+      color: #6c757d;
+      border-color: #6c757d;
+  }
+  
+  .btn-outline-secondary.news-nav-btn-image-style:hover {
+      color: #fff;
+      background-color: #6c757d;
+      border-color: #6c757d;
+  }
+  
+  
+  /* Media query para ajustes finos en pantallas pequeñas */
+  @media (max-width: 575.98px) {
+      .custom-news-card-image-style {
+          padding: 0;
+      }
+      .custom-news-card-image-style .card-body {
+          padding: 15px;
+      }
+  
+      .main-news-title {
+          font-size: 1.5em;
+          margin-bottom: 15px !important;
+      }
+  
+      .news-item-title-image-style {
+          font-size: 1.3em;
+      }
+      .news-item-description-image-style {
+          font-size: 0.9em;
+      }
+      .news-nav-btn-image-style {
+          padding: 6px 15px;
+          font-size: 0.9em;
+      }
+  
+      /* La imagen ya es responsive por defecto con img-fluid */
+      /* No necesitamos reglas específicas de tamaño fijo aquí */
+  }
