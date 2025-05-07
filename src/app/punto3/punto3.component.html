@@ -1,0 +1,71 @@
+<div class="container my-4">
+    <h2 class="text-center mb-4 main-section-title">Juego del Ahorcado</h2>
+  
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-6">
+        <div class="card p-4 hangman-game-area">
+          <h5 class="text-center mb-3">Categoría: {{ categoriaPalabras }}</h5>
+  
+          <div class="text-center mb-4">
+            <img [src]="imagenAhorcadoActual" alt="Estado del Ahorcado" class="img-fluid hangman-image">
+          </div>
+  
+          <div class="text-center mb-4">
+            <h3 class="word-display">{{ palabraOcultaString }}</h3>
+          </div>
+  
+          <div class="text-center mb-4">
+            <p class="fs-5">Intentos restantes: <span class="badge bg-info">{{ intentosRestantes }}</span></p>
+          </div>
+  
+          <div class="text-center mb-4">
+             <p class="fs-6">Letras incorrectas: <span class="badge bg-danger">{{ letrasIncorrectasString }}</span></p>
+          </div>
+  
+          <div class="text-center mb-4">
+              <p>Elige una letra:</p>
+              <div class="d-flex flex-wrap justify-content-center letter-buttons">
+                   <button
+                       *ngFor="let charCode of 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')"
+                       class="btn btn-outline-primary m-1 letter-button"
+                       [disabled]="estadoJuego !== 'jugando' || letrasIntentadas.includes(charCode)"
+                       (click)="procesarLetra(charCode)">
+                       {{ charCode }}
+                   </button>
+              </div>
+          </div>
+  
+  
+          <div class="text-center mt-4">
+            <div *ngIf="estadoJuego === 'ganado'" class="alert alert-success" role="alert">
+              ¡Felicidades! ¡Has adivinado la palabra!
+            </div>
+            <div *ngIf="estadoJuego === 'perdido'" class="alert alert-danger" role="alert">
+               ¡Oh no! Te quedaste sin intentos. La palabra era: <strong>{{ palabraSecreta }}</strong>
+            </div>
+          </div>
+  
+          <div class="text-center mt-4">
+             <button class="btn btn-secondary btn-lg" (click)="iniciarJuego()">Reiniciar Juego</button>
+          </div>
+  
+        </div> </div> </div> <div class="modal fade" id="perdisteModal" tabindex="-1" aria-labelledby="perdisteModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="perdisteModalLabel">Juego Terminado</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-center">
+            <p class="fs-5">¡Te quedaste sin intentos!</p>
+            <p>La palabra secreta era: <strong>{{ palabraSecreta }}</strong></p>
+            </div>
+          <div class="modal-footer justify-content-center">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-primary" (click)="iniciarJuego()" data-bs-dismiss="modal">Jugar de Nuevo</button>
+          </div>
+        </div>
+      </div>
+     </div>
+  
+  </div>

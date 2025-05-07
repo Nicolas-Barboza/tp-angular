@@ -1,0 +1,29 @@
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-right: 2rem; /* Increased spacing */
+  }
+  
+  .nav-link {
+    font-size: 1.1em;
+    padding: 0.75rem 1rem;
+    display: flex; /* Use flexbox for icon alignment */
+    align-items: center; /* Vertically center the icon and text */
+  }
+  
+  .nav-link.active {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 0.25rem;
+  }
+  
+  .navbar-nav {
+    align-items: center;
+  }
+  
+  .navbar-toggler {
+    border: none;
+  }
+  
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='rgba(255, 255, 255, 0.75)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+  }

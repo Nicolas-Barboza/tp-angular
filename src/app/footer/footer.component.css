@@ -1,0 +1,12 @@
+
+.bi {
+    font-size: 1.5em;
+  }
+  
+  .social-icons a {
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .social-icons a:hover {
+    color: #007bff; /* Un color similar al azul de Bootstrap, pero puedes ajustarlo */
+  }

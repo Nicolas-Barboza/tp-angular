@@ -1,0 +1,17 @@
+<div class="container my-4">
+  <h2 class="text-center mb-4 main-news-title">Últimas noticias sobre tecnología</h2>
+
+  <div class="card custom-news-card-image-style mx-auto">
+    <div class="card-body">
+      <h5 class="card-title text-center news-item-title-image-style">{{ noticias[currentIndex].titulo }}</h5>
+      <img [src]="noticias[currentIndex].img" class="img-fluid rounded news-item-image-image-style mb-3" alt="{{ noticias[currentIndex].titulo }}">
+
+      <p class="card-text news-item-description-image-style">{{ noticias[currentIndex].noticia }}</p>
+
+      <div class="d-flex justify-content-between mt-3">
+        <button (click)="retrasar()" class="btn btn-outline-secondary news-nav-btn-image-style">&laquo; Anterior</button>
+        <button (click)="adelantar()" class="btn btn-primary news-nav-btn-image-style">Siguiente &raquo;</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,82 @@
+/* Estilos específicos para el componente Punto 2 - Con tamaños fijos */
+
+/* Estilo para el contenedor principal de los productos */
+.fixed-product-container {
+    max-width: 960px; /* Define un ancho máximo para el contenedor (ajusta el valor según necesites) */
+    /* margin: auto; La clase container de Bootstrap ya maneja el centrado horizontal */
+}
+
+/* Estilo para el título principal de la sección */
+.main-section-title {
+    color: #007bff;
+    font-weight: bold;
+}
+
+/* *** Estilo para las imágenes con tamaño fijo *** */
+.product-img-fixed {
+    width: 280px; /* Ancho fijo para la imagen (ajusta el valor) */
+    height: 180px; /* Alto fijo para la imagen (ajusta el valor) */
+    display: block; /* Para que width/height funcionen correctamente y ocupe su propia línea */
+    margin-left: auto; /* Centra la imagen si es más estrecha que su contenedor */
+    margin-right: auto; /* Centra la imagen si es más estrecha que su contenedor */
+    /* card-img-top y rounded ya aplican estilos de Bootstrap */
+    /* Si quieres controlar cómo se ajustan las imágenes de diferente proporción al tamaño fijo: */
+    object-fit: cover; /* La imagen cubrirá el área, recortando si es necesario (recomendado con tamaño fijo para evitar distorsión fea) */
+    /* object-fit: contain; */ /* La imagen se ajustará dentro del área, pudiendo dejar espacio vacío */
+}
+/* ************************************************ */
+
+
+/* Estilo para el texto del precio */
+.price-text {
+    color: #28a745;
+    font-size: 1.2em;
+}
+
+/* Puedes añadir más estilos para las cards, botones, etc. si lo deseas */
+/*
+.product-card {
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+*/
+
+/* Estilos para los items del carrito en el modal si necesitas overrides específicos */
+/*
+.modal-body .list-group-item {
+    border-bottom: 1px dashed #eee;
+}
+*/
+
+/* *** Media Query para ajustar en pantallas pequeñas *** */
+/* Aunque queremos fijo, es CRUCIAL hacer adaptable en móviles para evitar desbordamiento */
+@media (max-width: 767.98px) { /* Ajusta este breakpoint si es necesario, md es 768px */
+
+    /* El contenedor principal se comportará como un container normal en móviles */
+    .fixed-product-container {
+        max-width: 100%; /* Permite que se ajuste al ancho de la pantalla */
+        padding: 0 15px; /* Añade un poco de padding lateral si el container no lo hace */
+    }
+
+    /* Las imágenes deben ajustarse en pantallas pequeñas */
+    .product-img-fixed {
+        width: 100%; /* La imagen ocupa todo el ancho disponible en su columna */
+        height: auto; /* La altura se ajusta automáticamente para mantener la proporción */
+        /* Puedes poner un max-height si no quieres que sean demasiado altas */
+        /* max-height: 150px; */
+        object-fit: cover; /* Mantiene el ajuste, útil si pusiste max-height */
+    }
+
+    /* Otros ajustes para móviles si son necesarios (del código anterior) */
+    .main-section-title {
+        font-size: 1.5em;
+        margin-bottom: 15px !important;
+    }
+
+    .modal-body .list-group-item {
+         font-size: 0.9em; /* Ajusta tamaño de texto en el modal en móviles */
+    }
+    .modal-body h4 {
+         font-size: 1.2em; /* Ajusta tamaño del total en el modal en móviles */
+    }
+}

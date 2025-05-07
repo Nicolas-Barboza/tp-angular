@@ -1,0 +1,66 @@
+/* Estilos para el componente Punto 3 (Juego del Ahorcado) */
+
+/* Estilo para el contenedor principal de la sección */
+.main-section-title {
+    color: #dc3545; /* Color danger (rojo) de Bootstrap */
+    font-weight: bold;
+}
+
+/* Estilo para el área principal del juego dentro de la card */
+.hangman-game-area {
+    background-color: #f8f9fa; /* Color light de Bootstrap para el fondo */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Estilo para la imagen del ahorcado */
+.hangman-image {
+    max-width: 200px; /* Ancho máximo para la imagen del ahorcado (ajusta según tus imágenes) */
+    height: auto; /* Mantener proporción */
+}
+
+/* Estilo para la visualización de la palabra oculta */
+.word-display {
+    font-size: 2em; /* Tamaño grande para las letras/guiones */
+    font-family: 'Courier New', Courier, monospace; /* Fuente monoespaciada puede ser útil */
+    letter-spacing: 5px; /* Espacio entre letras */
+}
+
+/* Estilo para los botones de letras del abecedario (si usas esa opción en el HTML) */
+.letter-buttons .btn {
+    width: 40px; /* Ancho fijo para los botones */
+    height: 40px; /* Alto fijo para los botones */
+    padding: 0; /* Eliminar padding interno */
+    display: flex; /* Usar flexbox para centrar la letra */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    font-weight: bold;
+}
+
+/* Estilo para los botones de letras deshabilitados */
+.letter-buttons .btn:disabled {
+    opacity: 0.5; /* Reducir opacidad */
+    cursor: not-allowed; /* Cambiar cursor */
+}
+
+/* Media Query para ajustes en pantallas pequeñas */
+@media (max-width: 575.98px) {
+    .main-section-title {
+        font-size: 1.5em;
+    }
+
+    .hangman-image {
+        max-width: 150px; /* Ajustar tamaño de imagen en móviles */
+    }
+
+    .word-display {
+        font-size: 1.5em; /* Ajustar tamaño de palabra en móviles */
+        letter-spacing: 3px;
+    }
+
+    .letter-buttons .btn {
+        width: 35px; /* Ajustar tamaño de botones en móviles */
+        height: 35px;
+        font-size: 0.9em;
+    }
+}
